@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS  employes (
 	ville VARCHAR(50),
 	pseudo VARCHAR(50),
 	mdp VARCHAR(500),
-	type_compte int(1),
+	type_compte int(2),
 	genre varchar(11),
 	date TIMESTAMP
 );
