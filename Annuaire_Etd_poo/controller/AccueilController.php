@@ -12,6 +12,7 @@ class AccueilController
 			<a href='?ctrl=install'> Installation de la base</a>
 		");
 		include "templates/footer.php"; 
+		//oui
 	}
 }
 
