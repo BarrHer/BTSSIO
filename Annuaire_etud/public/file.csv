@@ -1,0 +1,7 @@
+ID;Genre;Prenom;Nom;Email;Age;Ville;Date;"Type de Compte"
+2;;test;test;;0;;"2018-09-01 04:57:39";"Admin (1)"
+7;M.;isaac;Millen;;0;;"2018-09-02 15:00:25";"Basique (0)"
+8;M.;oui;oui;;0;;"2018-09-16 19:08:06";"Basique (0)"
+9;M.;oui;oui;;0;;"2018-09-16 19:09:35";"Basique (0)"
+10;M.;non;non;;0;;"2018-09-16 19:09:42";"Basique (0)"
+11;M.;Benjamin;Hoareau;;0;;"2018-09-16 22:21:18";"Admin (1)"
