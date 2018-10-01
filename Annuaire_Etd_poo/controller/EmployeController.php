@@ -75,9 +75,33 @@ class EmployeController {
 
     public function edit()
     {
-        $upd = $this->employes->edit($_POST,$_GET['id']);
+        /*$upd = $this->employes->edit($_POST,$_GET['id']);
 
-    	include 'view/employe/edit.php';
+        if ($upd) {
+            $msg = "L'employé ". $_GET['id']." a été modifié.";
+        } 
+        else {
+            $msg = "Impossible de modifier l'employé!";
+        }
+        $this->index($msg); // Redirection vers l'index*/
+      
+        if (isset($_POST['submit'])) {
 
+            $upd = $this->employes->edit($_POST,$_GET['id']);
+            
+
+            if ($upd) {
+                $msg = "L'employé ". $_GET['id']." a été modifié.";
+            } 
+            else {
+                $msg = "Impossible de modifier l'employé!";
+            }
+            $this->index($msg); // Redirection vers l'index
+
+        }
+        $employe = $this->employes->getEmploye($_GET['id']);
+        include 'view/employe/edit.php';
+    
     }
+
 }

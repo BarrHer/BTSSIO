@@ -5,6 +5,10 @@
 <table>
 	<tbody>
 		<tr>
+			<td>Id</td>
+			<td><?php echo $employe['id']; ?></td>
+		</tr>
+		<tr>
 			<td>Prénom</td>
 			<td><?php echo $employe['prenom']; ?></td>
 		</tr>

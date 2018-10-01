@@ -16,18 +16,18 @@ class employe extends ConnexionDB  {
 
 	public function add($empl)
 	{
-		$sql = $this->cnx->prepare("INSERT INTO employes (prenom,nom,email,age,ville) 
-        VALUES (?,?,?,?,?)");
-		$sql->execute( array($empl['prenom'],$empl['nom'],$empl['email'],$empl['age'],$empl['ville']) );
+		$sql = $this->cnx->prepare("INSERT INTO employes (prenom,nom,email,age,ville,pseudo,mdp,type_compte,genre) 
+        VALUES (?,?,?,?,?,?,?,?,?)");
+		$sql->execute( array($empl['prenom'],$empl['nom'],$empl['email'],$empl['age'],$empl['ville'],$empl['pseudo'],$empl['password'],$empl['type_compte'],$empl['genre']) );
 		return $sql->rowCount();
 	}
 
 	public function edit($empl,$id)
 	{
 		$sql = $this->cnx->prepare("UPDATE employes 
-                                    SET prenom=?,nom=?,email=?,age=?,ville=? 
+                                    SET prenom=?,nom=?,email=?,age=?,ville=?,pseudo=?,mdp=?,genre=?
                                     WHERE id=?");
-        $sql->execute( array($empl['prenom'],$empl['nom'],$empl['email'],$empl['age'],$empl['ville'],$id) );
+        $sql->execute( array($empl['prenom'],$empl['nom'],$empl['email'],$empl['age'],$empl['ville'],$empl['pseudo'],$empl['password'],$empl['genre'],$id) );
 		return $sql->rowCount();
 	}
 
