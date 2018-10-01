@@ -9,11 +9,12 @@ if (!empty($data['notification'])) {
 <table>
 	<thead>
 		<tr>
+			<th>Ligne</th>
+			<th>Id</th>
 			<th>Prénom</th>
 			<th>Nom</th>
 			<th>Email</th>
-			<th>Age</th>
-			<th>Age</th>
+			<th>Age</th>	
 			<th>Ville</th>
 			<th>Actions</th>
 		</tr>
@@ -24,6 +25,7 @@ if (!empty($data['notification'])) {
 			<?php foreach ($data['employes'] as $k => $v) : ?>
 				<tr>
 					<td><?php echo $k+1; ?></td>
+					<td><a href="?ctrl=employe&mth=show&id=<?php echo $v['id']; ?>"><?php echo $v['id']; ?></a></td>
 					<td><a href="?ctrl=employe&mth=show&id=<?php echo $v['id']; ?>"><?php echo $v['prenom']; ?></a></td>
 					<td><a href="?ctrl=employe&mth=show&id=<?php echo $v['id']; ?>"><?php echo $v['nom']; ?></a></td>
 					<td><a href="mailto:<?php echo $v['email']; ?>"><?php echo $v['email']; ?></a></td>
@@ -31,6 +33,7 @@ if (!empty($data['notification'])) {
 					<td><a href="https://www.google.com/maps?q=<?php echo $v['ville']; ?>"><?php echo $v['ville']; ?></a></td>
 					<td>
 						<a href="?ctrl=employe&mth=show&id=<?php echo $v['id']; ?>">Lire |</a>
+						<!-- <a href="?ctrl=employe&mth=edit&id=<?php// echo $v['id']; ?>">Modifier |</a> -->
 						<a href="?ctrl=employe&mth=edit&id=<?php echo $v['id']; ?>">Modifier |</a>
 						<a href="?ctrl=employe&mth=delete&id=<?php echo $v['id']; ?>">Supprimer</a>
 					</td>

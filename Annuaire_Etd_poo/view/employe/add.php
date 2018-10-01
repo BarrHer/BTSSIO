@@ -5,13 +5,17 @@
 <form action="?ctrl=employe&mth=add" method="post">
     <label for="prenom">Prénom</label><br>
     <input type="text" name="prenom" id="prenom"><br>
-    <label for="nom">Nom</label><br>
-    <input type="text" name="nom" id="nom"><br>
     <SELECT name="genre" size="1">
     <OPTION>M.
     <OPTION>Md.
     <OPTION>Mdlle
     </SELECT>
+    <label for="nom">Nom</label><br>
+    <input type="text" name="nom" id="nom"><br>
+    <label for="pseudo">Pseudo</label>
+    <input type="text" name="pseudo" id="pseudo" >
+    <label for="password">Password</label>
+    <input type="text" name="password" id="password">
     <label for="email">Adresse mail</label><br>
     <input type="text" name="email" id="email"><br>
     <label for="age">Age</label><br>
