@@ -84,8 +84,10 @@ class EmployeController {
             $msg = "Impossible de modifier l'employé!";
         }
         $this->index($msg); // Redirection vers l'index*/
-      
+
         if (isset($_POST['submit'])) {
+
+            
 
             $upd = $this->employes->edit($_POST,$_GET['id']);
             
@@ -94,12 +96,15 @@ class EmployeController {
                 $msg = "L'employé ". $_GET['id']." a été modifié.";
             } 
             else {
-                $msg = "Impossible de modifier l'employé!";
+                $msg = "Impossible de modifier l'employé". $_GET['id'];
             }
             $this->index($msg); // Redirection vers l'index
-
+            
+        
         }
         $employe = $this->employes->getEmploye($_GET['id']);
+        
+        
         include 'view/employe/edit.php';
     
     }

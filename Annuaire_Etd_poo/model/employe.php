@@ -37,4 +37,8 @@ class employe extends ConnexionDB  {
 		$sql->execute( array($id) );
 		return $sql->rowCount();
 	}
+
+
+    
+
 }

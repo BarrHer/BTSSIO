@@ -1,6 +1,6 @@
 <?php include "templates/header.php";?>
 
-<h2>Adjouter un employé</h2>
+<h2>Ajouter un employé</h2>
 <a href="?ctrl=employe">Retour</a><br><br>
 <form action="?ctrl=employe&mth=add" method="post">
     <label for="prenom">Prénom</label><br>
@@ -15,7 +15,7 @@
     <label for="pseudo">Pseudo</label>
     <input type="text" name="pseudo" id="pseudo" >
     <label for="password">Password</label>
-    <input type="text" name="password" id="password">
+    <input type="password" name="password" id="password">
     <label for="email">Adresse mail</label><br>
     <input type="text" name="email" id="email"><br>
     <label for="age">Age</label><br>
