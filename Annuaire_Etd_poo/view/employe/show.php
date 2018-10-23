@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php include "templates/header.php";?>
 
 <h2>Afficher <?php echo $employe['nom']; ?></h2>

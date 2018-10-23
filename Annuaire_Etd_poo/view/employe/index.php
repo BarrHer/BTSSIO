@@ -1,4 +1,18 @@
+<?php session_start(); ?>
 <?php include "templates/header.php";?>
+
+<?php
+
+if (empty($_SESSION)){
+	echo "<script type='text/javascript'>alert('Vous devez être connecté pour accéder à cette page'); 
+	window.location.href='?ctrl=employe&mth=login';</script>";
+	//echo "<script type='text/javascript'> alert('test'); </script>";
+	//header("Location: ?ctrl=Accueil&mth=index");
+    //exit();
+    
+}
+?>
+
 
 <p><a href="?ctrl=employe&mth=add">Ajouter un employé</a></p>
 <?php
@@ -32,10 +46,15 @@ if (!empty($data['notification'])) {
 					<td><a href="tel:<?php echo $v['age']; ?>"><?php echo $v['age']; ?></a></td>
 					<td><a href="https://www.google.com/maps?q=<?php echo $v['ville']; ?>"><?php echo $v['ville']; ?></a></td>
 					<td>
+						<?php if ($_SESSION['type_compte'] != 0) : ?>
 						<a href="?ctrl=employe&mth=show&id=<?php echo $v['id']; ?>">Lire |</a>
-						<!-- <a href="?ctrl=employe&mth=edit&id=<?php// echo $v['id']; ?>">Modifier |</a> -->
-						<a href="?ctrl=employe&mth=edit&id=<?php echo $v['id']; ?>">Modifier |</a>
-						<a href="?ctrl=employe&mth=delete&id=<?php echo $v['id']; ?>">Supprimer</a>
+							<a href="?ctrl=employe&mth=edit&id=<?php echo $v['id']; ?>">Modifier |</a>
+							<a href="?ctrl=employe&mth=delete&id=<?php echo $v['id']; ?>">Supprimer</a>
+						<?php else : ?>
+							<a href="?ctrl=employe&mth=show&id=<?php echo $v['id']; ?>">Lire</a>
+						<?php endif; ?>
+						
+						
 					</td>
 				</tr>
 			<?php

@@ -38,7 +38,10 @@ class employe extends ConnexionDB  {
 		return $sql->rowCount();
 	}
 
-
-    
-
+	public function login($pseudo, $mdp)
+	{
+	$sql = $this->cnx->prepare("SELECT id,pseudo,mdp,type_compte FROM employes WHERE pseudo=? AND mdp=?");
+	$sql->execute( array($pseudo, $mdp) );
+	return $sql->fetch();
+	}
 }

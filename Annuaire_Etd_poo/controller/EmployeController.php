@@ -84,10 +84,8 @@ class EmployeController {
             $msg = "Impossible de modifier l'employé!";
         }
         $this->index($msg); // Redirection vers l'index*/
-
+        $errors = array();
         if (isset($_POST['submit'])) {
-
-            
 
             $upd = $this->employes->edit($_POST,$_GET['id']);
             
@@ -96,17 +94,54 @@ class EmployeController {
                 $msg = "L'employé ". $_GET['id']." a été modifié.";
             } 
             else {
-                $msg = "Impossible de modifier l'employé". $_GET['id'];
+                $msg = "Impossible de modifier l'employé!";
             }
             $this->index($msg); // Redirection vers l'index
-            
-        
+
         }
         $employe = $this->employes->getEmploye($_GET['id']);
-        
-        
         include 'view/employe/edit.php';
     
     }
 
+    public function login()
+    {
+        $errors = array();
+        if (isset($_POST['login'])) {
+            $login = $this->employes->login($_POST['pseudo'],$_POST['password']);
+
+            if ($login) {
+                session_start();
+                
+                $_SESSION['id'] = $login['id'];
+                $_SESSION['pseudo'] = $login['pseudo'];
+                $_SESSION['type_compte'] = $login['type_compte'];
+                $msg = "Connexion réussie";
+                header("Location: ?ctrl=Accueil&mth=index");
+                //$this->index($msg); // Redirection vers l'index
+            } 
+            else {
+                echo "Mauvais pseudo ou mot de passe";
+            }
+            
+
+        }
+
+        //$employe = $this->employes->getEmploye($_GET['id']);
+        include 'view/employe/login.php';
+    }
+
+
+    public function logout()
+    {
+        session_start();
+        if (isset($_POST['logout'])){
+            session_unset();
+            session_destroy();
+            //echo session_status();
+            header("Location: ?ctrl=Accueil&mth=index");
+            
+            
+        }
+    }
 }

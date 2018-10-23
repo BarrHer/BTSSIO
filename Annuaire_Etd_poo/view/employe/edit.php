@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php include "templates/header.php";?>
 
 <h2>Modifier un employé</h2>
@@ -6,7 +7,7 @@
     <label for="prenom">Prénom</label>
     <input placeholder="Obligatoire" type="text" name="prenom" id="prenom" value="<?php echo $employe['prenom']; ?>">
     <label for="nom">Nom</label>
-    <input placeholder="Obligatoire" type="text" name="nom" id="nom" value="<?php echo $employe['nom']; ?>">
+    <input placeholder="Obligatoire" type="text" name="nom" id="nom" value="<?php echo $employe['nom']; ?>" required>
     <label for="genre">Genre</label>
     <SELECT name="genre" size="1">
     <OPTION>M.
@@ -14,7 +15,7 @@
     <OPTION>Mdlle
     </SELECT>
     <label for="email">Adresse mail</label>
-    <input type="text" name="email" id="email" value="<?php echo $employe['email']; ?>">
+    <input type="text" name="email" id="email" value="<?php echo $employe['email']; ?>" >
     <label for="age">Age</label>
     <input type="text" name="age" id="age" value="<?php echo $employe['age']; ?>">
     <label for="ville">ville de résidence</label>
@@ -22,7 +23,7 @@
     <label for="pseudo">Pseudo</label>
     <input type="text" name="pseudo" id="pseudo" value="<?php echo $employe['pseudo']; ?>">
     <label for="password">Password</label>
-    <input type="text" name="password" id="password" value="<?php echo $employe['password']; ?>">
+    <input type="text" name="password" id="password" value="<?php echo $employe['mdp']; ?>">
     <!-- <label for="type de compte">Type de compte (actuellement 
     <?php /*if ($type == 0) : ?>
         <?php echo "Basique)"; ?>
@@ -41,6 +42,7 @@
     </SELECT> -->
     
     <br><br>
+    <div  class="form-group">
     <input type="submit" name="submit" value="Modifier">
     <br><br>
 </form>
