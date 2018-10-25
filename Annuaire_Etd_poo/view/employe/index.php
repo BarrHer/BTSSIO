@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php include "templates/header.php";?>
+<?php $type = $_SESSION['type_compte'];?>
 
 <?php
 
@@ -14,7 +15,24 @@ if (empty($_SESSION)){
 ?>
 
 
-<p><a href="?ctrl=employe&mth=add">Ajouter un employé</a></p>
+<p>
+	<?php if ($type != 0){
+		echo "<p><a href='?ctrl=employe&mth=add'>Ajouter un employé</a> |
+		<a href='?ctrl=employe&mth=categorie'>Modifier Catégorie</a></p>";
+	}
+	?>
+	<form action="?ctrl=employe&mth=trie" method="post">
+		<SELECT name="categorie" size="1" required>
+			<?php
+			foreach ($data['categorie'] as $k => $v): ?>
+				<?php $var=$v['categorie']; ?>
+				<option value='<?php echo $var ?>'><?php echo $var; /*var_dump($v['categorie']);*/ ?></option>
+				
+			<?php endforeach;?>
+		</SELECT>
+		<input type="submit" name="trie" value="Trier par">
+	</form>
+</p>
 <?php
 if (!empty($data['notification'])) {
 	echo "<p>$data[notification]</p>";

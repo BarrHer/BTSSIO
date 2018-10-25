@@ -18,7 +18,7 @@ class AccueilController
 			<h3>Bienvenue </h3>
 			<a href='?ctrl=employe'> Accéder à l'annuaire des employés</a>
 			<br><br>
-			<a href='?ctrl=install'> Installation de la base</a>
+			<a href='view/install/index.php'> Installation de la base</a>
 			<br><br>
 			$aff
 		");

@@ -1,5 +1,21 @@
 <?php session_start();?>
 <?php include "templates/header.php";?>
+<?php $type = $_SESSION['type_compte']; ?>
+
+<?php if (empty($_SESSION)){
+	echo "<script type='text/javascript'>alert('Vous devez être connecté pour accéder à cette page'); 
+	window.location.href='?ctrl=employe&mth=login';</script>";
+	//echo "<script type='text/javascript'> alert('test'); </script>";
+	//header("Location: ?ctrl=Accueil&mth=index");
+    //exit();
+    
+}
+
+else if ($type == 0){
+    echo "<script type='text/javascript'>alert('Vous devez être administrateur pour accéder à cette page'); 
+	window.location.href='?ctrl=employe';</script>";
+}
+?>
 
 <h2>Adjouter un employé</h2>
 <a href="?ctrl=employe">Retour</a><br><br>
@@ -28,6 +44,15 @@
     <OPTION value="0">Basique</option>
     <OPTION value="1">Admin</option>
     <OPTION value="2">Super-Admin</option>
+    </SELECT>
+    <label for="categorie">Catégorie</label>
+    <SELECT name="categorie" size="1" required>
+    <?php
+    foreach ($data['categorie'] as $k => $v): ?>
+        <?php $var=$v['categorie']; ?>
+        <option value='<?php echo $var ?>'><?php echo $var; /*var_dump($v['categorie']);*/ ?></option>
+        
+    <?php endforeach;?>
     </SELECT>
     <br><br>
     <input type="submit" name="submit" value="Ajouter">
