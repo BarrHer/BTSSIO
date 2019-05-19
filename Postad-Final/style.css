@@ -1,0 +1,154 @@
+@CHARSET "UTF-8";
+
+body {
+	background-image:url(postit/images/fond.jpg);
+	font-family:sans-serif;
+	margin-left:auto;
+	margin-right:auto;
+	width:90%;
+}
+
+
+/*Styles de la zone de titre
+-------------------------------------------------*/
+#titre {
+	text-align:center;
+	font-size:160%;
+	line-height:75%;
+	color:#FFA500;
+	overflow:hidden;
+	height:130px;
+}
+
+#titre img {
+	float:left;
+	margin:5px;
+}
+
+
+
+/*Styles de la zone conteneur
+---------------------------------------------------*/
+#container {
+	display:inline-block;
+	width:73%;
+}
+
+#contenu {
+	text-align:justify;
+	padding:10px;
+	padding-bottom:20px;
+	background:#fff;
+	color:#000;
+}
+
+
+
+/*styles de la zone de menu
+-----------------------------------------------------*/
+#menu {
+	background:#4B7B87;
+	padding:3px;
+
+}
+
+#menu li {
+	display:inline;
+}
+
+#menu #select {
+	background:#fff;
+	color:#444;
+}
+
+#menu a {
+	text-decoration:none;
+	color:#fff;
+	background:#444;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+#menu a:hover {
+	background:#999;
+}
+
+
+
+/*Styles de la zone d' infos
+------------------------------------------------------*/
+#infos {
+	display:inline-block;
+	font-size:75%;
+	width:25%;
+	float:right;
+	vertical-align:top;
+	right:0px;
+	background:#999;
+
+}
+
+#infos h2 {
+	text-align:center;
+}
+
+#infos>div {
+	overflow:auto;
+	height:400px;
+}
+
+.info {
+	text-align:left;
+	height:200px;
+	overflow:hidden;
+	border:solid 2px #fff;
+	padding:3px;
+	margin:5px;
+}
+
+
+/*Styles de la zone de pied de page
+-------------------------------------------------------*/
+#pied {
+	padding:3px;
+	text-align:center;
+	font-size:75%;
+	background:#FF0000;
+	position: absolute;
+	bottom: 0;
+	clear: both;
+}
+
+/*Styles de la zone catalogue
+-------------------------------------------------------*/
+#photos {
+	padding:10px;
+	color:#000;
+}
+
+.photo {
+	display:inline-block;
+	position:relative;
+	border:2px solid #4B7B87;
+	background:#fff;
+	margin:5px;
+	padding:5px;
+
+}
+
+.photo div {
+	height:100px;
+	overflow:hidden;
+}
+
+.photo p {
+	text-align:center;
+	background:#789;
+	margin:0px;
+	margin-top:5px;
+}
+
+
+
