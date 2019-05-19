@@ -1,0 +1,2 @@
+   <p>Copyright &copy; lycée Pierre Poivre | Rue Hippolyte Foucque, Saint-Joseph 97480, Réunion - France | Tel: (262) 02 62 56 69 79 <BR>
+      SITE MODIFIÉ BY EMMA TONY - BENARD VALENTIN - BARRET HERVÉ BTS SIO 1</p>

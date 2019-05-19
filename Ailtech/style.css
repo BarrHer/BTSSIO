@@ -1,0 +1,87 @@
+ body {
+            font-family: Arial;
+            font-size: 13px;
+            color: #FFFFFF;
+            background-image: url('images/fond.png');
+        }
+        
+        header {
+            border-radius: 8px;
+            width: 99%;
+            margin-top: 0px 5px 0px;
+            height: 80px;
+            background-color: #668284;
+            box-shadow: 3px 3px 0px black;
+        }
+        
+        nav {
+            position: fixed;
+            right : 1%;
+            padding: 1px 0 10px 0;
+            border-radius: 10px;
+            margin: 20px 1px 10px;
+            width: 11%;
+            height: 355px;
+            background-color: #666666;
+            box-shadow: 3px 3px 0px black;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin-left: 10px;
+        }
+        
+        nav ul a {
+            text-decoration: none;
+            font-size: 20px;
+            color : #F4850E;
+        }
+        
+        footer {
+        position: relative;
+            border-radius: 10px;
+            padding-top: 10px;
+            height: 50px;
+            background-color: #668284;
+            clear: both;
+            font-family: Verdana, sans-serif;
+            font-size: 10px;
+            text-align: center;
+            color: #ffffff;
+            box-shadow: 3px 3px 0px black;
+            margin : 20px;
+                   }
+        
+        article {
+            padding: 10px 0 50px;
+            border-radius: 30px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            width: 86%;
+            min-height: 300px;
+            background-color: #666666;
+            box-shadow: 3px 3px 0px black;
+        }
+        
+        #name {
+            float: left;
+            margin-left: 5px;
+            padding-top: 5px;
+            font-size: 16px;
+            font-family: Verdana, sans-serif;
+            color: #ffffff;
+        }
+
+        h1 {
+            color: #F4850E;
+        }
+        table
+        {
+            border-collapse: collapse; /* Les bordures du tableau seront collées (plus joli) */
+        }
+        td
+        {
+            border: 0px;
+        }
